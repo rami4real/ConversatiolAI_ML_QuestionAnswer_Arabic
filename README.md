@@ -197,8 +197,10 @@ Nous recommandons donc **Mistral7B** comme modèle principal pour les tâches de
 
 ---
 
-## 📞 Contact
-**Auteur : [Votre Nom]** 👤  
-📧 **Email :** [votre.email@example.com]  
-🌐 **Portfolio :** [VotrePortfolio.com]  
-📂 **GitHub :** [VotreGitHub](https://github.com/VotreGitHub)
+## 👥 Contributions
+
+Ce projet a été développé en collaboration par :
+
+- **Mohamed Habib Kammoun** 👨‍💻
+- **Ahmed Rami Belguith** 👨‍💻
+- **Dhia Elhak Toukebri** 👨‍💻

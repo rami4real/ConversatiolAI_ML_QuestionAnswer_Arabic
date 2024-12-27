@@ -111,12 +111,12 @@ Pour fine-tuner ou personnaliser les modèles avec vos propres données, utilise
 ollama create -f <path-to-modelfile> <nom-du-modele>
 ```
 
-- Remplacez <path-to-modelfile> par le chemin vers le fichier contenant vos données (par exemple, un fichier JSON ou un autre format pris en charge).
+- Remplacez <path-to-modelfile> par le chemin vers le fichier contenant vos données ..
 - Remplacez <nom-du-modele> par le nom que vous souhaitez attribuer au modèle.
 
 #### Exemple :
 ```bash
-ollama create -f ./data/mistral-modelfile.json mistral7b-custom
+ollama create -f ./data/mistral_Modelfile mistral7b-custom
 ```
 ---
 

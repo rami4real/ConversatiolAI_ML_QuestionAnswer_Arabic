@@ -21,10 +21,11 @@
 
 ### **3. Traduction Anglais → Arabe**
 - **Outils utilisés :** Trois modèles de traduction de Hugging Face :
-  - `Helsinki-NLP/opus-mt-en-ar`
-  - `marefa-nlp/marefa-mt-en-ar`
-  - `t5-v1_1-base`
-- **Résultat :** Le modèle `marefa-nlp/marefa-mt-en-ar` a produit les meilleures traductions en termes de qualité et de pertinence.
+  - [`Helsinki-NLP/opus-mt-en-ar`](https://huggingface.co/Helsinki-NLP/opus-mt-en-ar)
+  - [`marefa-nlp/marefa-mt-en-ar`](https://huggingface.co/marefa-nlp/marefa-mt-en-ar)
+  - [`t5-v1_1-base`](https://huggingface.co/t5-v1_1-base)
+- **Résultat :** Le modèle [`marefa-nlp/marefa-mt-en-ar`](https://huggingface.co/marefa-nlp/marefa-mt-en-ar) a produit les meilleures traductions en termes de qualité et de pertinence.
+
 
 
 ![marefa-nlp/marefa-mt-en-ar](marefa1.jpg)

@@ -92,24 +92,28 @@ Une fois Ollama installé, utilisez les commandes suivantes pour télécharger l
 
 #### Télécharger le modèle **Mistral 7B** :
 ```bash
-ollama pull mistral7b
-
+ollama pull mistral7b 
+```
 
 #### Télécharger le modèle Llama 3.2 :
+```bash
 ollama pull llama3.2
+```
 ---
 
 ### 3. Créer et Exécuter les Modèles
 Pour fine-tuner ou personnaliser les modèles avec vos propres données, utilisez la commande suivante :
-
+```bash
 ollama create -f <path-to-modelfile> <nom-du-modele>
+```
 
 - Remplacez <path-to-modelfile> par le chemin vers le fichier contenant vos données (par exemple, un fichier JSON ou un autre format pris en charge).
 - Remplacez <nom-du-modele> par le nom que vous souhaitez attribuer au modèle.
 
 #### Exemple :
+```bash
 ollama create -f ./data/mistral-modelfile.json mistral7b-custom
-
+```
 ---
 
 ### 4. Lancer les Modèles avec Docker et Open Web UI
@@ -117,16 +121,18 @@ Si vous souhaitez interagir avec les modèles via une interface graphique conviv
 
 #### Étape 1 : Lancer le Conteneur Docker
 Exécutez la commande suivante pour lancer le conteneur Docker :
+```bash
 
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
 -v open-webui:/app/backend/data --name open-webui --restart always \
 ghcr.io/open-webui/open-webui:main
+```
 
 #### Étape 2 : Vérifier le Conteneur
 Assurez-vous que Docker est installé et actif. Vérifiez l’état du conteneur avec cette commande :
-
+```bash
 docker ps
-
+```
 #### Étape 3 : Accéder à l’Interface
 Ouvrez votre navigateur web et rendez-vous à l'adresse suivante :
 

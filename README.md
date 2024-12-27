@@ -145,7 +145,7 @@ http://localhost:3000
 Vous pourrez alors interagir avec les modèles Mistral 7B et Llama 3.2 dans une interface utilisateur intuitive.
 
 
-![MON GIF](Generetive_AI_Ml (1).gif)
+![MON GIF](Generetive_AI_Mla.gif)
 
 ---
 

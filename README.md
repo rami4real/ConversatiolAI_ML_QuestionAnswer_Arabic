@@ -7,8 +7,8 @@
 ### 1️⃣ Scraping des Données 🔍
 - **But :** Collecter des questions-réponses (Q/A) pertinentes pour le machine learning en anglais.
 - **Sources utilisées :**
-  - Turing Machine Learning Questions: [https://www.turing.com/interview-questions/machine-learning](https://www.turing.com/interview-questions/machine-learning)
-  - MyGreatLearning Blog: [https://www.mygreatlearning.com/blog/machine-learning-interview-questions/](https://www.mygreatlearning.com/blog/machine-learning-interview-questions/)
+  - [`Turing Machine Learning Questions`](https://www.turing.com/interview-questions/machine-learning)
+  - [`MyGreatLearning Blog`](https://www.mygreatlearning.com/blog/machine-learning-interview-questions/)
 - **Outils :** Utilisation de `Beautiful Soup` (Python) pour le scraping.
 
 ---

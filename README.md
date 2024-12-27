@@ -148,6 +148,68 @@ Vous pourrez alors interagir avec les modèles Mistral 7B et Llama 3.2 dans une 
 ![MON GIF](Generetive_AI_Mlaa.gif)
 
 ---
+---
+## Évaluation des Modèles LLaMA et Mistral7B
+
+Ce projet évalue les performances des modèles **LLaMA** et **Mistral7B** en utilisant différentes métriques pour comparer leurs réponses générées dans un contexte donné, en particulier pour des textes en langue arabe. Nous avons commencé par des métriques classiques telles que **BLEU** et **ROUGE-L**, mais avons adopté une nouvelle métrique **WSAA** (Weighted Semantic Similarity with Arabic-specific Adjustments) pour une évaluation plus précise.
+
+### 1. Résultats **BLEU** et **ROUGE-L**
+
+#### Table des résultats
+
+| **Question** | **Modèle**   | **BLEU** | **ROUGE-L** |
+|--------------|--------------|----------|-------------|
+| **1**        | LLaMA        | 0.0413   | 0.3000      |
+|              | Mistral7B    | 0.0820   | 0.6667      |
+| **2**        | LLaMA        | 0.1083   | 0.0000      |
+|              | Mistral7B    | 0.0835   | 0.3478      |
+| **3**        | LLaMA        | 0.0390   | 0.0000      |
+|              | Mistral7B    | 0.0159   | 0.0000      |
+
+#### Observations
+
+Les résultats des métriques **BLEU** et **ROUGE-L** montrent que ni **LLaMA** ni **Mistral7B** n'ont atteint des performances satisfaisantes, particulièrement dans la question 3 où les scores sont très faibles. Ces métriques classiques ne semblent pas adaptées pour cette tâche spécifique en arabe.
+
+---
+
+### 2. Adopting the **WSAA** Metric
+
+Pour une évaluation plus pertinente, nous avons choisi d'adopter la **métrique WSAA** (Weighted Semantic Similarity with Arabic-specific Adjustments). Cette métrique prend en compte plusieurs aspects importants :
+
+- **Cohérence Sémantique** : Mesure de la similarité sémantique entre la réponse générée et la référence.
+- **Couverture de Domaine** : Mesure dans quelle mesure les termes spécifiques au domaine sont couverts dans les réponses générées.
+- **Composants supplémentaires** : BLEU et ROUGE sont également pris en compte dans cette métrique ajustée pour l'arabe.
+
+Nous avons donc calculé un score global en fonction de ces critères.
+
+---
+
+### 3. Résultats **WSAA** (Weighted Semantic Similarity with Arabic-specific Adjustments)
+
+#### Table des résultats
+
+| **Question** | **Modèle**   | **Score Final** | **Cohérence Sémantique** | **Couverture de Domaine** |
+|--------------|--------------|-----------------|--------------------------|---------------------------|
+| **1**        | LLaMA        | 0.3163          | 0.8001                   | 0.0000                    |
+|              | Mistral7B    | 0.3662          | 0.8205                   | 0.0000                    |
+| **2**        | LLaMA        | 0.3225          | 0.8749                   | 0.0000                    |
+|              | Mistral7B    | 0.3461          | 0.8538                   | 0.0000                    |
+| **3**        | LLaMA        | 0.3425          | 0.7832                   | 0.2500                    |
+|              | Mistral7B    | 0.3900          | 0.9289                   | 0.2500                    |
+
+#### Observations
+
+Les résultats obtenus avec la métrique **WSAA** montrent que **Mistral7B** dépasse **LLaMA** sur toutes les questions, avec des scores supérieurs en **cohérence sémantique** et un meilleur **score final**. Mistral7B obtient également un score particulièrement élevé dans la **question 3**.
+
+---
+
+### 4. Conclusion : Le Meilleur Modèle
+
+En conclusion, bien que **LLaMA** ait montré des performances initiales acceptables selon certaines métriques, **Mistral7B** s'avère être le modèle le plus performant sur la base de notre métrique **WSAA**. Cela en fait le choix optimal pour générer des réponses cohérentes et pertinentes, en particulier dans un contexte en arabe.
+
+Nous recommandons donc **Mistral7B** comme modèle principal pour les tâches de génération de texte dans ce domaine.
+
+---
 
 
 ## 🚀 Résultats et Prochaines Étapes

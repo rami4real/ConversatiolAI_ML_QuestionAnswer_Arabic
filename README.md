@@ -25,7 +25,9 @@
   - `marefa-nlp/marefa-mt-en-ar`
   - `t5-v1_1-base`
 - **Résultat :** Le modèle `marefa-nlp/marefa-mt-en-ar` a produit les meilleures traductions en termes de qualité et de pertinence.
-![marefa-nlp/marefa-mt-en-ar](marefa.jpeg)
+
+
+![marefa-nlp/marefa-mt-en-ar](marefa1.jpeg)
 
 
 ---

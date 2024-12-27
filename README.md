@@ -143,6 +143,7 @@ Ouvrez votre navigateur web et rendez-vous à l'adresse suivante :
 http://localhost:3000
 
 Vous pourrez alors interagir avec les modèles Mistral 7B et Llama 3.2 dans une interface utilisateur intuitive.
+![Performance Comparison GIF](Generetive_AI_Ml (1).gif)
 
 ---
 

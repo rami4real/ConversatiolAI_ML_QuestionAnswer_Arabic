@@ -85,6 +85,8 @@ Avant de commencer, installez Ollama sur votre machine en suivant ces étapes :
 - Téléchargez la version d’Ollama correspondant à votre système d’exploitation (Windows, macOS ou Linux).
 - Installez l’outil en suivant les instructions spécifiques à votre plateforme.
 
+---
+
 ### 2. Télécharger les Modèles
 Une fois Ollama installé, utilisez les commandes suivantes pour télécharger les modèles nécessaires :
 
@@ -93,6 +95,7 @@ ollama pull mistral7b
 
 #### Télécharger le modèle Llama 3.2 :
 ollama pull llama3.2
+---
 
 ### 3. Créer et Exécuter les Modèles
 Pour fine-tuner ou personnaliser les modèles avec vos propres données, utilisez la commande suivante :
@@ -104,6 +107,8 @@ ollama create -f <path-to-modelfile> <nom-du-modele>
 
 #### Exemple :
 ollama create -f ./data/mistral-modelfile.json mistral7b-custom
+
+---
 
 ### 4. Lancer les Modèles avec Docker et Open Web UI
 Si vous souhaitez interagir avec les modèles via une interface graphique conviviale, utilisez Open Web UI avec Docker.
@@ -126,6 +131,8 @@ Ouvrez votre navigateur web et rendez-vous à l'adresse suivante :
 http://localhost:3000
 
 Vous pourrez alors interagir avec les modèles Mistral 7B et Llama 3.2 dans une interface utilisateur intuitive.
+
+---
 
 
 ## 🚀 Résultats et Prochaines Étapes

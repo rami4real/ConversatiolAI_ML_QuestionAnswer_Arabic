@@ -46,10 +46,13 @@
 
 ### **5. Fine-tuning des Modèles LLM**
 - **Modèles testés :**
-  - **API Gemini** (le meilleur parmi les trois modèles testés)
+  - **Finetuned Google AI Studio** (le meilleur parmi les trois modèles testés)
   - **AraBERT**
   - **T5-Small**
-- **Résultat :** Bien que l'API Gemini ait surpassé les autres modèles en termes de performances, aucun des trois modèles n'a produit des résultats satisfaisants pour la tâche spécifique.
+- **Résultat :** Bien que Finetuned Google AI Studio ait surpassé les autres modèles en termes de performances, aucun des trois modèles n'a produit des résultats satisfaisants pour la tâche spécifique.
+
+[Télécharger la vidéo de performance](ai_studio.mp4)
+
 
 
 ---

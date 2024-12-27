@@ -72,7 +72,7 @@
 - Création d'une interface utilisateur avec **Ollama Open UI** pour interagir avec le chatbot.
 - Investigation des modèles directement via l'interface pour valider leurs réponses et effectuer des comparaisons.
 
-    ![marefa-nlp/marefa-mt-en-ar](interface.jpg)
+    ![marefa-nlp/marefa-mt-en-ar](interface.png)
 
 
 ---

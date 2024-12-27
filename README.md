@@ -65,6 +65,8 @@
 - **Étapes :**
   - Téléchargement et fine-tuning des modèles avec des fichiers adaptés (`modelfiles`).
 - **Comparaison :** Le modèle **Mistral 7B** a démontré des performances supérieures en termes de scores WSSA et de retours qualitatifs.
+
+  
 ![marefa-nlp/marefa-mt-en-ar](mistral.png)
 
 

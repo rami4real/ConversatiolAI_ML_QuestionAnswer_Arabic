@@ -45,11 +45,12 @@
 ---
 
 ### **5. Fine-tuning des Modèles LLM**
-- Modèles testés :
-  - **API Gemini**
+- **Modèles testés :**
+  - **API Gemini** (le meilleur parmi les trois modèles testés)
   - **AraBERT**
   - **T5-Small**
-- **Résultat :** Ces modèles n'ont pas produit de performances satisfaisantes pour la tâche spécifique.
+- **Résultat :** Bien que l'API Gemini ait surpassé les autres modèles en termes de performances, aucun des trois modèles n'a produit des résultats satisfaisants pour la tâche spécifique.
+
 
 ---
 

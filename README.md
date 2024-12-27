@@ -51,7 +51,7 @@
   - **T5-Small**
 - **Résultat :** Bien que Finetuned Google AI Studio ait surpassé les autres modèles en termes de performances, aucun des trois modèles n'a produit des résultats satisfaisants pour la tâche spécifique.
 
-[Télécharger la vidéo de performance](ai_studio.mp4)
+![Performance Comparison GIF](ai_studio.gif)
 
 
 

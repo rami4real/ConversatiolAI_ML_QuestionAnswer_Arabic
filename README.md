@@ -39,6 +39,9 @@
   - Générer des données dans le format SQuAD (Q/A structuré), adapté pour l'entraînement des modèles.
 - **Approche :** Multi-shot pour garantir des exemples variés et cohérents.
 
+  ![marefa-nlp/marefa-mt-en-ar](gemini.jpg)
+
+
 ---
 
 ### **5. Fine-tuning des Modèles LLM**

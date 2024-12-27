@@ -76,6 +76,57 @@
 
 
 ---
+## 🛠️ Lancer les Modèles Mistral 7B et Llama 3.2 avec Ollama et Docker
+
+### 1. Installation d'Ollama
+Avant de commencer, installez Ollama sur votre machine en suivant ces étapes :
+
+- Rendez-vous sur le site officiel d’Ollama : [https://ollama.ai](https://ollama.ai).
+- Téléchargez la version d’Ollama correspondant à votre système d’exploitation (Windows, macOS ou Linux).
+- Installez l’outil en suivant les instructions spécifiques à votre plateforme.
+
+### 2. Télécharger les Modèles
+Une fois Ollama installé, utilisez les commandes suivantes pour télécharger les modèles nécessaires :
+
+#### Télécharger le modèle Mistral 7B :
+ollama pull mistral7b
+
+#### Télécharger le modèle Llama 3.2 :
+ollama pull llama3.2
+
+### 3. Créer et Exécuter les Modèles
+Pour fine-tuner ou personnaliser les modèles avec vos propres données, utilisez la commande suivante :
+
+ollama create -f <path-to-modelfile> <nom-du-modele>
+
+- Remplacez <path-to-modelfile> par le chemin vers le fichier contenant vos données (par exemple, un fichier JSON ou un autre format pris en charge).
+- Remplacez <nom-du-modele> par le nom que vous souhaitez attribuer au modèle.
+
+#### Exemple :
+ollama create -f ./data/mistral-modelfile.json mistral7b-custom
+
+### 4. Lancer les Modèles avec Docker et Open Web UI
+Si vous souhaitez interagir avec les modèles via une interface graphique conviviale, utilisez Open Web UI avec Docker.
+
+#### Étape 1 : Lancer le Conteneur Docker
+Exécutez la commande suivante pour lancer le conteneur Docker :
+
+docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
+-v open-webui:/app/backend/data --name open-webui --restart always \
+ghcr.io/open-webui/open-webui:main
+
+#### Étape 2 : Vérifier le Conteneur
+Assurez-vous que Docker est installé et actif. Vérifiez l’état du conteneur avec cette commande :
+
+docker ps
+
+#### Étape 3 : Accéder à l’Interface
+Ouvrez votre navigateur web et rendez-vous à l'adresse suivante :
+
+http://localhost:3000
+
+Vous pourrez alors interagir avec les modèles Mistral 7B et Llama 3.2 dans une interface utilisateur intuitive.
+
 
 ## 🚀 Résultats et Prochaines Étapes
 - **Meilleur modèle :** `Mistral 7B`

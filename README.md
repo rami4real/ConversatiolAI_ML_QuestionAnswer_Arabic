@@ -90,8 +90,10 @@ Avant de commencer, installez Ollama sur votre machine en suivant ces étapes :
 ### 2. Télécharger les Modèles
 Une fois Ollama installé, utilisez les commandes suivantes pour télécharger les modèles nécessaires :
 
-#### Télécharger le modèle Mistral 7B :
+#### Télécharger le modèle **Mistral 7B** :
+```bash
 ollama pull mistral7b
+
 
 #### Télécharger le modèle Llama 3.2 :
 ollama pull llama3.2

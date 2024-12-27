@@ -7,8 +7,8 @@
 ### 1️⃣ Scraping des Données 🔍
 - **But :** Collecter des questions-réponses (Q/A) pertinentes pour le machine learning en anglais.
 - **Sources utilisées :**
-  - Turing Machine Learning Questions
-  - MyGreatLearning Blog
+  - Turing Machine Learning Questions: [https://www.turing.com/interview-questions/machine-learning](https://www.turing.com/interview-questions/machine-learning)
+  - MyGreatLearning Blog: [https://www.mygreatlearning.com/blog/machine-learning-interview-questions/](https://www.mygreatlearning.com/blog/machine-learning-interview-questions/)
 - **Outils :** Utilisation de `Beautiful Soup` (Python) pour le scraping.
 
 ---
@@ -193,6 +193,9 @@ Nous recommandons donc **Mistral7B** comme modèle principal pour les tâches de
 - **Meilleur modèle :** `Mistral 7B`
 - **Prochaines étapes :**
   - Améliorer la robustesse du chatbot sur d'autres dialectes arabes 🌍
+  -  Implémenter un système de feedback utilisateur pour améliorer les réponses 📝
+  -  Développer une API RESTful pour faciliter l'intégration 🔗
+
   
 
 ---

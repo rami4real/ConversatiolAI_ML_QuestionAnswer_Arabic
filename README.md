@@ -200,7 +200,7 @@ Nous recommandons donc **Mistral7B** comme modèle principal pour les tâches de
 
 ---
 # 📁 Structure du répertoire
-
+```plaintext
 project/
 │
 ├── Improving Squad Files (Api Gemini)/         # Contains formatted datasets and related notebooks
@@ -246,7 +246,7 @@ project/
 │   └── t5-v1_1-base/                           # Base configuration for T5 translation
 │
 └── README.md                                   # Project documentation
-
+```
 ## 👥 Contributions
 
 Ce projet a été développé en collaboration par :

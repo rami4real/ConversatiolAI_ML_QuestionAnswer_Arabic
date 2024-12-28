@@ -1,165 +1,166 @@
-# 🌟 Chatbot en Arabe pour le Machine Learning 🌟
+# 🌟 Arabic Chatbot for Machine Learning 🌟
 
 ---
 
-## Table des matières
+## Table of Contents
 
 1. [📌 Project Overview](#-project-overview)
-2. [📋 Étapes Principales du Projet](#-étapes-principales-du-projet)
-3. [🛠️ Lancer les Modèles Mistral 7B et Llama 3.2 avec Ollama et Docker](#️-lancer-les-modèles-mistral-7b-et-llama-32-avec-ollama-et-docker)
-4. [📊 Évaluation des Modèles LLaMA et Mistral7B](#-évaluation-des-modèles-llama-et-mistral7b)
-5. [🚀 Résultats et Prochaines Étapes](#-résultats-et-prochaines-étapes)
-6. [📁 Structure du Répertoire](#-structure-du-répertoire)
+2. [📋 Main Project Steps](#-main-project-steps)
+3. [🛠️ Running Mistral 7B and Llama 3.2 Models with Ollama and Docker](#️-running-mistral-7b-and-llama-32-models-with-ollama-and-docker)
+4. [📊 Evaluation of LLaMA and Mistral7B Models](#-evaluation-of-llama-and-mistral7b-models)
+5. [🚀 Results and Next Steps](#-results-and-next-steps)
+6. [📁 Directory Structure](#-directory-structure)
 
 ---
 
-## 📌 Projet en bref
+## 📌 Project Overview
 
-Développement d'un chatbot en arabe spécialisé dans les questions liées au machine learning, avec des étapes couvrant la collecte de données, le nettoyage, la traduction, le fine-tuning des modèles LLM, et la mise en place d'une interface utilisateur intuitive.
+Development of an Arabic chatbot specialized in machine learning questions, with steps covering data collection, cleaning, translation, fine-tuning of LLM models, and implementation of an intuitive user interface.
 
 ---
----
 
-## 📋 Étapes Principales du Projet
+## 📋 Main Project Steps
 
-### 1️⃣ Scraping des Données 🔍
-- **But :** Collecter des questions-réponses (Q/A) pertinentes pour le machine learning en anglais.
-- **Sources utilisées :**
+### 1️⃣ Data Scraping 🔍
+- **Goal:** Collect relevant machine learning Q&A in English.
+- **Sources used:**
   - [`Turing Machine Learning Questions`](https://www.turing.com/interview-questions/machine-learning)
   - [`MyGreatLearning Blog`](https://www.mygreatlearning.com/blog/machine-learning-interview-questions/)
-- **Outils :** Utilisation de `Beautiful Soup` (Python) pour le scraping.
+- **Tools:** Using `Beautiful Soup` (Python) for scraping.
 
 ---
 
-### 2️⃣ Nettoyage de la Base de Données 🧹
-- Suppression des caractères spéciaux, des espaces inutiles et standardisation du format des données.
-- Validation manuelle pour garantir la pertinence des données collectées.
+### 2️⃣ Database Cleaning 🧹
+- Removal of special characters, unnecessary spaces, and standardization of data format.
+- Manual validation to ensure relevance of collected data.
 
 ---
 
-### 3️⃣ Traduction Anglais → Arabe 🔄
-- **Outils utilisés :** Trois modèles de traduction de Hugging Face :
+### 3️⃣ English → Arabic Translation 🔄
+- **Tools used:** Three Hugging Face translation models:
   - [`Helsinki-NLP/opus-mt-en-ar`](https://huggingface.co/Helsinki-NLP/opus-mt-en-ar)
   - [`marefa-nlp/marefa-mt-en-ar`](https://huggingface.co/marefa-nlp/marefa-mt-en-ar)
   - [`t5-v1_1-base`](https://huggingface.co/t5-v1_1-base)
-- **Résultat :** Le modèle [`marefa-nlp/marefa-mt-en-ar`](https://huggingface.co/marefa-nlp/marefa-mt-en-ar) a produit les meilleures traductions en termes de qualité et de pertinence.
+- **Result:** The [`marefa-nlp/marefa-mt-en-ar`](https://huggingface.co/marefa-nlp/marefa-mt-en-ar) model produced the best translations in terms of quality and relevance.
 
 ![marefa-nlp/marefa-mt-en-ar](Media/marefa1.jpg)
 
 ---
 
-### 4️⃣ Nettoyage et Formatage des Textes en Arabe ✨
-- **Outils :** API Gemini (via prompts avancés) pour :
-  - Reformuler et corriger les textes.
-  - Générer des données dans le format SQuAD (Q/A structuré), adapté pour l'entraînement des modèles.
-- **Approche :** Multi-shot pour garantir des exemples variés et cohérents.
+### 4️⃣ Cleaning and Formatting Arabic Texts ✨
+- **Tools:** Gemini API (via advanced prompts) for:
+  - Reformulating and correcting texts.
+  - Generating data in SQuAD format (structured Q/A), suitable for model training.
+- **Approach:** Multi-shot to ensure varied and coherent examples.
 
 ![marefa-nlp/marefa-mt-en-ar](Media/gemini.jpg)
 
 ---
 
-### 5️⃣ Fine-tuning des Modèles LLM 🔧
-- **Modèles testés :**
-  - **Finetuned Google AI Studio** (le meilleur parmi les trois modèles testés)
+### 5️⃣ Fine-tuning LLM Models 🔧
+- **Models tested:**
+  - **Finetuned Google AI Studio** (the best among the three tested models)
   - **AraBERT**
   - **T5-Small**
-- **Résultat :** Bien que Finetuned Google AI Studio ait surpassé les autres modèles en termes de performances, aucun des trois modèles n'a produit des résultats satisfaisants pour la tâche spécifique.
+- **Result:** Although Finetuned Google AI Studio outperformed other models in terms of performance, none of the three models produced satisfactory results for the specific task.
 
 ![Performance Comparison GIF](Media/ai_studio.gif)
 
 ---
 
-### 6️⃣ Utilisation de Ollama et Fine-tuning 🚀
-- **Plateforme utilisée :** Ollama
-- **Modèles testés :**
+### 6️⃣ Using Ollama and Fine-tuning 🚀
+- **Platform used:** Ollama
+- **Models tested:**
   - `Mistral 7B`
   - `Llama 3.2`
-- **Étapes :**
-  - Téléchargement et fine-tuning des modèles avec des fichiers adaptés (`modelfiles`).
-- **Comparaison :** Le modèle **Mistral 7B** a démontré des performances supérieures en termes de scores WSSA et de retours qualitatifs.
+- **Steps:**
+  - Downloading and fine-tuning models with adapted files (`modelfiles`).
+- **Comparison:** The **Mistral 7B** model demonstrated superior performance in terms of WSSA scores and qualitative feedback.
 
 ![marefa-nlp/marefa-mt-en-ar](Media/mistral.png)
 
 ---
 
-### 7️⃣ Interface Utilisateur 💻
-- Création d'une interface utilisateur avec **Ollama Open UI** pour interagir avec le chatbot.
-- Investigation des modèles directement via l'interface pour valider leurs réponses et effectuer des comparaisons.
+### 7️⃣ User Interface 💻
+- Creation of a user interface with **Ollama Open UI** to interact with the chatbot.
+- Investigation of models directly through the interface to validate their responses and perform comparisons.
 
 ![marefa-nlp/marefa-mt-en-ar](Media/interface.png)
 
 ---
-## 🛠️ Lancer les Modèles Mistral 7B et Llama 3.2 avec Ollama et Docker
 
-### 1. Installation d'Ollama 📥
-Avant de commencer, installez Ollama sur votre machine en suivant ces étapes :
+## 🛠️ Running Mistral 7B and Llama 3.2 Models with Ollama and Docker
 
-- Rendez-vous sur le site officiel d'Ollama : [https://ollama.ai](https://ollama.ai).
-- Téléchargez la version d'Ollama correspondant à votre système d'exploitation (Windows, macOS ou Linux).
-- Installez l'outil en suivant les instructions spécifiques à votre plateforme.
+### 1. Installing Ollama 📥
+Before starting, install Ollama on your machine by following these steps:
+
+- Go to the official Ollama website: [https://ollama.ai](https://ollama.ai).
+- Download the Ollama version corresponding to your operating system (Windows, macOS, or Linux).
+- Install the tool following the platform-specific instructions.
 
 ---
 
-### 2. Télécharger les Modèles ⬇️
-Une fois Ollama installé, utilisez les commandes suivantes pour télécharger les modèles nécessaires :
+### 2. Download the Models ⬇️
+Once Ollama is installed, use the following commands to download the necessary models:
 
-#### Télécharger le modèle **Mistral 7B** :
+#### Download the **Mistral 7B** model:
 ```bash
 ollama pull mistral7b 
 ```
 
-#### Télécharger le modèle Llama 3.2 :
+#### Download the Llama 3.2 model:
 ```bash
 ollama pull llama3.2
 ```
 ---
 
-### 3. Créer et Exécuter les Modèles ⚙️
-Pour fine-tuner ou personnaliser les modèles avec vos propres données, utilisez la commande suivante :
+### 3. Create and Run the Models ⚙️
+To fine-tune or customize the models with your own data, use the following command:
 ```bash
-ollama create -f <path-to-modelfile> <nom-du-modele>
+ollama create -f <path-to-modelfile> <model-name>
 ```
 
-- Remplacez <path-to-modelfile> par le chemin vers le fichier contenant vos données.
-- Remplacez <nom-du-modele> par le nom que vous souhaitez attribuer au modèle.
+- Replace <path-to-modelfile> with the path to your data file.
+- Replace <model-name> with the name you want to give to the model.
 
-#### Exemple :
+#### Example:
 ```bash
 ollama create -f ./data/mistral_Modelfile mistral7b-custom
 ```
 ---
 
-### 4. Lancer les Modèles avec Docker et Open Web UI 🐳
-Si vous souhaitez interagir avec les modèles via une interface graphique conviviale, utilisez Open Web UI avec Docker.
+### 4. Launch Models with Docker and Open Web UI 🐳
+If you want to interact with the models via a user-friendly graphical interface, use Open Web UI with Docker.
 
-#### Étape 1 : Lancer le Conteneur Docker
+#### Step 1: Launch Docker Container
 ```bash
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
 -v open-webui:/app/backend/data --name open-webui --restart always \
 ghcr.io/open-webui/open-webui:main
 ```
 
-#### Étape 2 : Vérifier le Conteneur
+#### Step 2: Check Container
 ```bash
 docker ps
 ```
-#### Étape 3 : Accéder à l'Interface
-Ouvrez votre navigateur web et rendez-vous à l'adresse suivante :
+#### Step 3: Access Interface
+Open your web browser and go to:
 
 http://localhost:3000
 
-![MON GIF](Media/Generetive_AI_Mlaa.gif)
+![MY GIF](Media/Generetive_AI_Mlaa.gif)
 
 ---
-## 📊 Évaluation des Modèles LLaMA et Mistral7B
 
-Ce projet évalue les performances des modèles **LLaMA** et **Mistral7B** en utilisant différentes métriques pour comparer leurs réponses générées dans un contexte donné, en particulier pour des textes en langue arabe. Nous avons commencé par des métriques classiques telles que **BLEU** et **ROUGE-L**, mais avons adopté une nouvelle métrique **WSAA** (Weighted Semantic Similarity with Arabic-specific Adjustments) pour une évaluation plus précise.
+## 📊 Evaluation of LLaMA and Mistral7B Models
 
-### 1. Résultats **BLEU** et **ROUGE-L** 📈
+This project evaluates the performance of **LLaMA** and **Mistral7B** models using different metrics to compare their generated responses in a given context, particularly for Arabic language texts. We started with classic metrics such as **BLEU** and **ROUGE-L**, but adopted a new **WSAA** metric (Weighted Semantic Similarity with Arabic-specific Adjustments) for more accurate evaluation.
 
-#### Table des résultats
+### 1. **BLEU** and **ROUGE-L** Results 📈
 
-| **Question** | **Modèle**   | **BLEU** | **ROUGE-L** |
+#### Results Table
+
+| **Question** | **Model**    | **BLEU** | **ROUGE-L** |
 |--------------|--------------|----------|-------------|
 | **1**        | LLaMA        | 0.0413   | 0.3000      |
 |              | Mistral7B    | 0.0820   | 0.6667      |
@@ -170,54 +171,53 @@ Ce projet évalue les performances des modèles **LLaMA** et **Mistral7B** en ut
 
 #### Observations 🔍
 
-Les résultats des métriques **BLEU** et **ROUGE-L** montrent que ni **LLaMA** ni **Mistral7B** n'ont atteint des performances satisfaisantes, particulièrement dans la question 3 où les scores sont très faibles. Ces métriques classiques ne semblent pas adaptées pour cette tâche spécifique en arabe.
+The results of **BLEU** and **ROUGE-L** metrics show that neither **LLaMA** nor **Mistral7B** achieved satisfactory performance, particularly in question 3 where scores are very low. These classic metrics don't seem suitable for this specific task in Arabic.
 
 ---
 
 ### 2. Adopting the **WSAA** Metric 📝
 
-Pour une évaluation plus pertinente, nous avons choisi d'adopter la **métrique WSAA** (Weighted Semantic Similarity with Arabic-specific Adjustments). Cette métrique prend en compte plusieurs aspects importants :
+For a more relevant evaluation, we chose to adopt the **WSAA metric** (Weighted Semantic Similarity with Arabic-specific Adjustments). This metric takes into account several important aspects:
 
-- **Cohérence Sémantique** : Mesure de la similarité sémantique entre la réponse générée et la référence.
-- **Couverture de Domaine** : Mesure dans quelle mesure les termes spécifiques au domaine sont couverts dans les réponses générées.
-- **Composants supplémentaires** : BLEU et ROUGE sont également pris en compte dans cette métrique ajustée pour l'arabe.
-
----
-
-### 3. Résultats **WSAA** 📊
-
-#### Table des résultats
-
-| **Question** | **Modèle**   | **Score Final** | **Cohérence Sémantique** | **Couverture de Domaine** |
-|--------------|--------------|-----------------|--------------------------|---------------------------|
-| **1**        | LLaMA        | 0.3163          | 0.8001                   | 0.0000                    |
-|              | Mistral7B    | 0.3662          | 0.8205                   | 0.0000                    |
-| **2**        | LLaMA        | 0.3225          | 0.8749                   | 0.0000                    |
-|              | Mistral7B    | 0.3461          | 0.8538                   | 0.0000                    |
-| **3**        | LLaMA        | 0.3425          | 0.7832                   | 0.2500                    |
-|              | Mistral7B    | 0.3900          | 0.9289                   | 0.2500                    |
+- **Semantic Coherence**: Measures semantic similarity between generated response and reference.
+- **Domain Coverage**: Measures how well domain-specific terms are covered in generated responses.
+- **Additional Components**: BLEU and ROUGE are also considered in this Arabic-adjusted metric.
 
 ---
 
-### 4. Conclusion : Le Meilleur Modèle 🏆
+### 3. **WSAA** Results 📊
 
-En conclusion, bien que **LLaMA** ait montré des performances initiales acceptables selon certaines métriques, **Mistral7B** s'avère être le modèle le plus performant sur la base de notre métrique **WSAA**. Cela en fait le choix optimal pour générer des réponses cohérentes et pertinentes, en particulier dans un contexte en arabe.
+#### Results Table
 
-Nous recommandons donc **Mistral7B** comme modèle principal pour les tâches de génération de texte dans ce domaine.
+| **Question** | **Model**   | **Final Score** | **Semantic Coherence** | **Domain Coverage** |
+|--------------|-------------|-----------------|------------------------|-------------------|
+| **1**        | LLaMA       | 0.3163          | 0.8001                 | 0.0000            |
+|              | Mistral7B   | 0.3662          | 0.8205                 | 0.0000            |
+| **2**        | LLaMA       | 0.3225          | 0.8749                 | 0.0000            |
+|              | Mistral7B   | 0.3461          | 0.8538                 | 0.0000            |
+| **3**        | LLaMA       | 0.3425          | 0.7832                 | 0.2500            |
+|              | Mistral7B   | 0.3900          | 0.9289                 | 0.2500            |
+
+---
+
+### 4. Conclusion: The Best Model 🏆
+
+In conclusion, although **LLaMA** showed acceptable initial performance according to some metrics, **Mistral7B** proves to be the best performing model based on our **WSAA** metric. This makes it the optimal choice for generating coherent and relevant responses, particularly in an Arabic context.
+
+We therefore recommend **Mistral7B** as the primary model for text generation tasks in this domain.
 
 ---
 
-## 🚀 Résultats et Prochaines Étapes
-- **Meilleur modèle :** `Mistral 7B`
-- **Prochaines étapes :**
-  - Améliorer la robustesse du chatbot sur d'autres dialectes arabes 🌍
-  -  Implémenter un système de feedback utilisateur pour améliorer les réponses 📝
-  -  Développer une API RESTful pour faciliter l'intégration 🔗
-
-  
+## 🚀 Results and Next Steps
+- **Best model:** `Mistral 7B`
+- **Next steps:**
+  - Improve chatbot robustness across other Arabic dialects 🌍
+  - Implement user feedback system to improve responses 📝
+  - Develop a RESTful API to facilitate integration 🔗
 
 ---
-# 📁 Structure du répertoire
+
+# 📁 Directory Structure
 ```plaintext
 project/
 │
@@ -265,9 +265,10 @@ project/
 │
 └── README.md                                   # Project documentation
 ```
+
 ## 👥 Contributions
 
-Ce projet a été développé en collaboration par :
+This project was developed in collaboration by:
 
 - **Mohamed Habib Kammoun** 👨‍💻
 - **Ahmed Rami Belguith** 👨‍💻

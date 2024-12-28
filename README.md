@@ -26,7 +26,7 @@
   - [`t5-v1_1-base`](https://huggingface.co/t5-v1_1-base)
 - **Résultat :** Le modèle [`marefa-nlp/marefa-mt-en-ar`](https://huggingface.co/marefa-nlp/marefa-mt-en-ar) a produit les meilleures traductions en termes de qualité et de pertinence.
 
-![marefa-nlp/marefa-mt-en-ar](marefa1.jpg)
+![marefa-nlp/marefa-mt-en-ar](Media/marefa1.jpg)
 
 ---
 
@@ -36,7 +36,7 @@
   - Générer des données dans le format SQuAD (Q/A structuré), adapté pour l'entraînement des modèles.
 - **Approche :** Multi-shot pour garantir des exemples variés et cohérents.
 
-![marefa-nlp/marefa-mt-en-ar](gemini.jpg)
+![marefa-nlp/marefa-mt-en-ar](Media/gemini.jpg)
 
 ---
 
@@ -47,7 +47,7 @@
   - **T5-Small**
 - **Résultat :** Bien que Finetuned Google AI Studio ait surpassé les autres modèles en termes de performances, aucun des trois modèles n'a produit des résultats satisfaisants pour la tâche spécifique.
 
-![Performance Comparison GIF](ai_studio.gif)
+![Performance Comparison GIF](Media/ai_studio.gif)
 
 ---
 
@@ -60,7 +60,7 @@
   - Téléchargement et fine-tuning des modèles avec des fichiers adaptés (`modelfiles`).
 - **Comparaison :** Le modèle **Mistral 7B** a démontré des performances supérieures en termes de scores WSSA et de retours qualitatifs.
 
-![marefa-nlp/marefa-mt-en-ar](mistral.png)
+![marefa-nlp/marefa-mt-en-ar](Media/mistral.png)
 
 ---
 
@@ -68,7 +68,7 @@
 - Création d'une interface utilisateur avec **Ollama Open UI** pour interagir avec le chatbot.
 - Investigation des modèles directement via l'interface pour valider leurs réponses et effectuer des comparaisons.
 
-![marefa-nlp/marefa-mt-en-ar](interface.png)
+![marefa-nlp/marefa-mt-en-ar](Media/interface.png)
 
 ---
 ## 🛠️ Lancer les Modèles Mistral 7B et Llama 3.2 avec Ollama et Docker
@@ -121,8 +121,7 @@ docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
 ghcr.io/open-webui/open-webui:main
 ```
 
-#### Étape 2 : Vérifier le Conteneur
-```bash
+#### Étape 2 : Vérifier le Conteneur```bash
 docker ps
 ```
 #### Étape 3 : Accéder à l'Interface
@@ -130,7 +129,7 @@ Ouvrez votre navigateur web et rendez-vous à l'adresse suivante :
 
 http://localhost:3000
 
-![MON GIF](Generetive_AI_Mlaa.gif)
+![MON GIF](Media/Generetive_AI_Mlaa.gif)
 
 ---
 ## 📊 Évaluation des Modèles LLaMA et Mistral7B
@@ -207,3 +206,7 @@ Ce projet a été développé en collaboration par :
 - **Mohamed Habib Kammoun** 👨‍💻
 - **Ahmed Rami Belguith** 👨‍💻
 - **Dhia Elhak Toukebri** 👨‍💻
+
+<a href="https://github.com/habibkammoun/GenrativeIA_ML_questions_arabic/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=habibkammoun/GenrativeIA_ML_questions_arabic" />
+</a>

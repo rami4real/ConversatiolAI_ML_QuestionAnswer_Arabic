@@ -121,7 +121,8 @@ docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway \
 ghcr.io/open-webui/open-webui:main
 ```
 
-#### Étape 2 : Vérifier le Conteneur```bash
+#### Étape 2 : Vérifier le Conteneur
+```bash
 docker ps
 ```
 #### Étape 3 : Accéder à l'Interface

@@ -199,6 +199,53 @@ Nous recommandons donc **Mistral7B** comme modèle principal pour les tâches de
   
 
 ---
+# 📁 Structure du répertoire
+
+project/
+│
+├── Improving Squad Files (Api Gemini)/         # Contains formatted datasets and related notebooks
+│   ├── clean_text.ipynb                        # Notebook for text cleaning
+│   ├── squad_formatted_dataset1-1.json         # Formatted SQuAD dataset version 1.1
+│   └── squad_formatted_dataset_multi_shot.json # Multi-shot SQuAD formatted dataset
+│
+├── data cleaning/                              # Data cleaning scripts and datasets
+│   ├── clean.ipynb                             # Notebook for cleaning data
+│   ├── cleaned_ml_questions.csv                # Cleaned dataset of ML questions
+│   └── greatlearning_ml_questions.csv          # Raw dataset from Great Learning
+│
+├── Finetune/                                   # Fine-tuning notebooks
+│   ├── API gemini.ipynb                        # Notebook for API Gemini fine-tuning
+│   ├── AraBERT_.ipynb                          # Notebook for AraBERT fine-tuning
+│   ├── t5smallarabe.ipynb                      # Notebook for fine-tuning T5 small Arabic model
+│   └── out of memory(ambanovasystemsSambaLingo-Arabic-Chat)/  # Out-of-memory experiments
+│
+├── Media/                                      # Media assets for the project
+│
+├── Models_ollama/                              # Models and metric evaluation files
+│   ├── Metriques/                              # Metrics evaluation
+│   │   └── metriques.ipynb                     # Notebook for metrics evaluation
+│   └── ModelFiles/                             # Model generation files
+│       ├── generate_model_file.ipynb           # Notebook to generate model files
+│       ├── Modelfile llama3.2/                 # Model files for LLaMA 3.2
+│       │   └── Modelfile                       # Main model file
+│       └── Modelfile Msirtral7b/               # Model files for Msirtral 7B
+│           └── Modelfile                       # Main model file
+│
+├── Scraping/                                   # Scraping scripts and results
+│   ├── greatlearning_ml_questions.csv          # Dataset scraped from Great Learning
+│   ├── scrape1.ipynb                           # First scraping notebook
+│   ├── scrape2.ipynb                           # Second scraping notebook
+│   ├── turing_ml_questions_with_images.csv     # Turing ML questions with images
+│   ├── httpswww.turing.cominterview-questionsmachine-learning/  # Turing source data
+│   └── images/                                 # Images scraped from Turing
+│
+├── traduction/                                 # Translation datasets and configurations
+│   ├── Helsinki-NLPopus-mt-en-ar/              # Helsinki NLP translation configurations
+│   ├── marefa-nlpmarefa-mt-en-ar/              # Marefa translation configurations
+│   ├── questions_translated.csv                # Translated questions dataset
+│   └── t5-v1_1-base/                           # Base configuration for T5 translation
+│
+└── README.md                                   # Project documentation
 
 ## 👥 Contributions
 

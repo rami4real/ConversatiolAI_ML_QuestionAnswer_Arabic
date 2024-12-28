@@ -2,6 +2,24 @@
 
 ---
 
+## Table des matières
+
+1. [📌 Project Overview](#-project-overview)
+2. [📋 Étapes Principales du Projet](#-étapes-principales-du-projet)
+3. [🛠️ Lancer les Modèles Mistral 7B et Llama 3.2 avec Ollama et Docker](#️-lancer-les-modèles-mistral-7b-et-llama-32-avec-ollama-et-docker)
+4. [📊 Évaluation des Modèles LLaMA et Mistral7B](#-évaluation-des-modèles-llama-et-mistral7b)
+5. [🚀 Résultats et Prochaines Étapes](#-résultats-et-prochaines-étapes)
+6. [📁 Structure du Répertoire](#-structure-du-répertoire)
+
+---
+
+## 📌 Projet en bref
+
+Développement d'un chatbot en arabe spécialisé dans les questions liées au machine learning, avec des étapes couvrant la collecte de données, le nettoyage, la traduction, le fine-tuning des modèles LLM, et la mise en place d'une interface utilisateur intuitive.
+
+---
+---
+
 ## 📋 Étapes Principales du Projet
 
 ### 1️⃣ Scraping des Données 🔍
